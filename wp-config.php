@@ -26,7 +26,7 @@ if ( 'DEV' == getenv('Environment') ) {
   define('DB_NAME', 'xr178774_mal');
   define('DB_USER', 'xr178774_mal');
   define('DB_PASSWORD', 'Kang00r');
-  define('DB_HOST', 'localhost');
+  define('DB_HOST', '46.242.145.27');
 }
 
 
