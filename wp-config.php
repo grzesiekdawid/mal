@@ -17,7 +17,12 @@
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 
-if ( 'DEV' == getenv('Environment') ) {
+if ( 'GREG' == getenv('Environment') ) {
+  define('DB_NAME', 'mal');
+  define('DB_USER', 'root');
+  define('DB_PASSWORD', 'komputer');
+  define('DB_HOST', 'localhost');
+} elseif ( 'MACIEJ' == getenv('Environment') ) {
   define('DB_NAME', 'mal');
   define('DB_USER', 'root');
   define('DB_PASSWORD', 'komputer');
@@ -26,7 +31,7 @@ if ( 'DEV' == getenv('Environment') ) {
   define('DB_NAME', 'xr178774_mal');
   define('DB_USER', 'xr178774_mal');
   define('DB_PASSWORD', 'Kang00r');
-  define('DB_HOST', '46.242.145.27');
+  define('DB_HOST', 'localhost');
 }
 
 
