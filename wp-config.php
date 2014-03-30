@@ -23,9 +23,9 @@ if ( 'GREG' == getenv('Environment') ) {
   define('DB_PASSWORD', 'komputer');
   define('DB_HOST', 'localhost');
 } elseif ( 'MACIEJ' == getenv('Environment') ) {
-  define('DB_NAME', 'mal');
+  define('DB_NAME', 'xr178774_mal');
   define('DB_USER', 'root');
-  define('DB_PASSWORD', 'komputer');
+  define('DB_PASSWORD', '');
   define('DB_HOST', 'localhost');
 } else {
   define('DB_NAME', 'xr178774_mal');
