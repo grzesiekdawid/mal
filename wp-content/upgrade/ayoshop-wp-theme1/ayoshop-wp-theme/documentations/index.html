@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ayo Shop - Documentation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Documentation for Ayo Shop - Free Child WP Theme for Genesis Framework">
+<meta name="author" content="AyoThemes">
+
+<!-- Le styles -->
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="assets/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+<!-- Navbar
+================================================== -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="brand" href="http://themeforest.net/user/AyoThemes/">AyoThemes</a>
+			<a class="brand" href="http://designmodo.com/">Designmodo</a>
+			<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="">
+							<a href="http://designmodo.com/free-wordpress-theme">Demo</a>
+						</li>
+						<li class="">
+							<a href="http://designmodo.com/free-wordpress-theme">Get the Theme</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+	</div>
+</div>
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+<div class="container">
+<h1>AyoShop <small>v1.1</small></h1>
+<p>Clean and Responsive eCommerce Child Theme.</p>
+</div>
+</header>
+
+<div class="container">
+
+<!-- Docs nav
+================================================== -->
+<div class="row">
+	<div class="span3 bs-docs-sidebar">
+		<ul class="nav nav-list bs-docs-sidenav">
+			<li><a href="#intro"><i class="icon-chevron-right"></i>Intro</a></li>
+			<li><a href="#getting-started"><i class="icon-chevron-right"></i>1. Getting Started</a></li>
+			<li><a href="#setting"><i class="icon-chevron-right"></i>2. Setting up Homepage</a></li>
+			<li><a href="#sidebar"><i class="icon-chevron-right"></i>3. Sidebar and Widgets</a></li>
+			<li><a href="#woocommerce"><i class="icon-chevron-right"></i>4. Setting up WooCommerce</a></li>
+			<li><a href="#options"><i class="icon-chevron-right"></i>5. Child Theme Options</a></li>
+			<li><a href="#customizer"><i class="icon-chevron-right"></i>6. WordPress Customizer</a></li>
+			<li><a href="#shortcode"><i class="icon-chevron-right"></i>7. Shortcode</a></li>
+			<li><a href="#plugins"><i class="icon-chevron-right"></i>8. Plugins</a></li>
+			<li><a href="#localization"><i class="icon-chevron-right"></i>9. Translation and Localization</a></li>
+			<li><a href="#xml"><i class="icon-chevron-right"></i>10. Demo data (xml)</a></li>
+			<li><a href="#sourceandcredits"><i class="icon-chevron-right"></i>11. Source And Credits</a></li>
+			<li><a href="#changelog"><i class="icon-chevron-right"></i>12. Changelog</a></li>
+			<li><a href="#outro"><i class="icon-chevron-right"></i>Outro</a></li>
+		</ul>
+	</div>
+<div class="span9">
+
+<!-- Download
+================================================== -->
+<section id="intro">
+<div class="page-header">
+<h2>Intro</h2>
+</div>
+<p class="lead">First of all, thank you so much if you have already downloaded <b>Ayo Shop - A Clean and Responsive eCommerce Child Theme</b>.</p>
+
+<p>Just for a quick note! This documentation only covers all features and how to use Ayo Shop Child theme. So, if you are new about <a href="http://wordpress.org/" target="_blank">WordPress</a> and <a href="http://themeforest.net/item/genesis-framework/134019?ref=designmodo" target="_blank">Genesis Framework</a>, we recommend you to download and read <a href="http://my.studiopress.com/docs/genesis-for-beginners/" target="_blank">Genesis for Absolute Beginer</a> by <a href="http://studiopress.com/" target="_blank">StudioPress</a>. The <abbr title="Portable Document Format">PDF</abbr> almost covers all information to get started with <a href="http://wordpress.org/" target="_blank">WordPress</a> and <a href="http://themeforest.net/item/genesis-framework/134019?ref=designmodo" target="_blank">Genesis Framework</a>.</p>
+
+<p>You can also read the <a href="">documentation</a> about AyoShop Child Theme online, just to make sure that it's up to date.</p>
+
+</section>
+
+<!-- File structure
+================================================== -->
+<section id="getting-started">
+<div class="page-header">
+<h2>1. Getting started</h2>
+</div>
+<p>AyoShop Child Theme minimum requirements:</p>
+<ul>
+	<li>WordPress 3.4+</li>
+	<li>Genesis Framework version 1.8+</li>
+</ul>
+
+</section>
+
+<!-- Settings
+================================================== -->
+<section id="setting">
+<div class="page-header">
+<h2>2. Setting Up Homepage</h2>
+</div>
+
+<p>By default, AyoShop child theme homepage is a blog page or list of posts.
+To setup a homepage just like at the <a href="http://demo.ayothemes.com/ayoshop/">demo page</a>, 
+just <b>Add New</b> or <b>edit</b> WordPress page (Admin Dashboard &rarr; Pages &rarr; New Page). Step by step to setup homepage:</p>
+<ol>
+	<li>Give title for your page (e.g. homepage, home, front page etc).</li>
+	<li>At the Page Attributes &rarr; Template, choose <b>Homepage Slider</b> template.</li>
+	<li>At Genesis Layout Settings, choose <b>full-width</b> (recommended).</li>
+	<li>Publish.</li>
+</ol>
+<br />
+<a href="images/ayo-setup-homepage.png" title="Homepage Setup"><img src="images/ayo-setup-homepage.png" class="img-polaroid" title="Homepage Setup"></a>
+<br />
+<br />
+<br />
+<p class="lead">Setting up slider for <b>Homepage Slider</b> template.</p>
+<ol>
+	<li>Click add media button <img src="images/add-media.png" alt="Add Media" title="Add Media"> at the page.</li>
+	<li>Drag and drop images from your computer. Any attachments that is linked on this page will be turned into slider.</li>
+	<li>You can Add *<b>Title</b> and <b>Description</b> for each image. Shortcode is allowed in this field.</li>
+	<li>Drag and drop the attachment images order. (Optional)</li>
+	<li>After you're done, click <b>Update</b>.</li>
+	<li>If you want to use a third-party slider, you can add any shortcodes or widgets at Homepage Slider Widget Area (Appeareance &rarr; Widgets &rarr; Homepage Slider). <img src="images/homepage_slider_widget.png" alt="">. Any active widget in this area will disable AyoShop built-in slider.</li>
+</ol>
+
+<p><small>* Required</small></p>
+<a href="images/ayo-setup-slider.png" title="Slider Setup"><img src="images/ayo-setup-slider.png" class="img-polaroid" title="Slider Setup"></a>
+<br />
+<br />
+<br />
+<p>Now lets go to Settings &rarr; Reading.</p>
+<ol>
+	<li>At <b>Front page displays</b> choose a <b>static page</b>.</li>
+	<li>At <b>Front Page</b> selection, choose the page that we just created for Homepage.</li>
+	<li>At <b>Posts page</b> selection, choose blog page (optional).</li>
+</ol>
+<a href="images/ayo-setup-front-page.png" title="Frontpage Setup"><img src="images/ayo-setup-front-page.png" class="img-polaroid" title="Frontpage Setup"></a>
+<br />
+<br />
+<br />
+<p class="lead">The differences between <b>Homepage</b> template and <b>Homepage Slider</b> template</p>
+
+<p><b>Homepage</b> template is just a blank page that will not display anything beside the content. This template is used for <a href="https://github.com/sy4mil/Aqua-Page-Builder">Aqua Page Builder</a> plugin or other page builder plugins.</p>
+
+<p><b>Homepage Slider</b> template has a built-in contents which include slider, widgets area, featured products and recent products. The image below illustrates how the structure looks like:</p>
+
+<a href="images/homepage_structure.png"><img src="images/homepage_structure.png" class="img-polaroid"></a>
+
+</section>
+
+<!-- WooCommerce
+================================================== -->
+<section id="sidebar">
+<div class="page-header">
+<h2>3. Sidebar and Widgets</h2>
+</div>
+<p class="lead">Sidebar Area</p>
+<ul>
+	<li>Header Right</li>
+	<li>Primary Sidebar</li>
+	<li>Homepage Slider (only shows at Homepage Slider Template)</li>
+	<li>Homepage Widget Area (only shows at Homepage Slider Template)</li>
+	<li>Footer Widget Area (Will show below footer copyright)</li>
+	<li>Footer 1, Footer 2, Footer 3 and Footer 4</li>
+</ul>
+<br />
+<p>If the <a href="http://wordpress.org/extend/plugins/genesis-simple-sidebars/">Genesis Simple Sidebars</a> plugin is activated, you will have the ability to manage Primary sidebar area, either per post, per page, or per tag/category archive basis.</p>
+<p class="lead">Custom Widgets</p>
+<ul>
+	<li>All Genesis built-in widgets</li>
+	<li>Ayo - text icon (Display icon before widget title)</li>
+</ul>
+
+
+<!-- WooCommerce
+================================================== -->
+<section id="woocommerce">
+<div class="page-header">
+<h2>4. Setting Up WooCommerce</h2>
+</div>
+
+<p>In order to turn your website into eCommerce with WooCommerce, you need to have the following that are listed below <span class="label label-success">Installed</span> and <span class="label label-info">Activated</span>:</p>
+<ul>
+	<li>WordPress 3.4+</li>
+	<li>Genesis Framework version 1.8+ <span class="label label-success">Installed</span></li>
+	<li>AyoShop child theme for Genesis Framework <span class="label label-info">Activated</span></li>
+	<li>WooCommerce, minimum version 1.6.0 <span class="label label-info">Activated</span></li>
+	<li>Genesis Connect for WooCommerce <span class="label label-info">Activated</span></li>
+	<li>Genesis Simple Menus <span class="label">Optional</span></li>
+	<li>Genesis Simple Sidebars <span class="label">Optional</span></li>
+</ul>
+
+<p>You can learn more about how to setup your shop with <a href="http://wordpress.org/extend/plugins/woocommerce/">WooCommerce</a> at their <a href="http://wcdocs.woothemes.com/">documentation</a> page.</p>
+
+<p>After you activate WooCommerce, please go to WooCommerce &rarr; Settings &rarr; Catalog &rarr; Image Options. And change the followings:</p>
+<ul>
+	<li><b>Catalog Images</b> width: 380px | height: 380px or 480px | Hard crop: check</li>
+	<li><b>Single Product Image</b>: width: 600px | height: 600px | Hard crop: check or uncheck</li>
+	<li><b>Product Thumbnails</b>: width: 180px | height: 180px | Hard crop: check</li>
+</ul>
+
+<p>Optional : Use <a href="http://wordpress.org/extend/plugins/regenerate-thumbnails/">Regenerate thumbnails</a> or <a href="http://wordpress.org/extend/plugins/force-regenerate-thumbnails/">Force Regenerate Thumbnails</a> plugin if there are images which are already stored before you save WooCommerce Image Options.</p>
+
+</section>
+
+<!-- Options
+================================================== -->
+<section id="options">
+	
+	<div class="page-header">
+	<h2>5. Child Theme Options and Settings</h2>
+	</div>
+	<h4>General Settings</h4>
+	<a href="images/ayo-general-settings.png" title="General Settings"><img src="images/ayo-general-settings.png" class="img-polaroid" title="General Settings"></a>
+	<br />
+	<br />
+	<h4>Homepage Settings</h4>
+	<a href="images/ayo-homepage-settings.png" title="Homepage Settings"><img src="images/ayo-homepage-settings.png" class="img-polaroid" title="Homepage Settings"></a>
+	<br />
+	<br />
+	<h4>Styling Settings</h4>
+	<a href="images/ayo-styling-settings.png" title="Styling Settings"><img src="images/ayo-styling-settings.png" class="img-polaroid" title="Styling Settings"></a>
+	<br />
+	<br />
+	<h4>Typography Settings</h4>
+	<a href="images/ayo-typography-settings.png" title="Typography Settings"><img src="images/ayo-typography-settings.png" class="img-polaroid" title="Typography Settings"></a>
+	<br />
+	<br />
+	<h4>WooCommerce Settings</h4>
+	<a href="images/ayo-woocommerce-settings.png" title="WooCommerce Settings"><img src="images/ayo-woocommerce-settings.png" class="img-polaroid" title="WooCommerce Settings"></a>
+	<br />
+	<br />
+	<h4>Update Settings</h4>
+	<a href="images/ayo-update-settings.png" title="Update Settings"><img src="images/ayo-update-settings.png" class="img-polaroid" title="Update Settings"></a>
+	<br />
+	<br />
+
+</section>
+
+<!-- Options
+================================================== -->
+<section id="customizer">
+	
+	<div class="page-header">
+	<h2>6. WordPress Customizer</h2>
+	</div>
+	<p class="lead">New WordPress Customizer featured already inlcuded on this child theme.</p>
+		<div class="row">
+			<div class="span2">
+			<p>Customizer Color</p>
+			<a href="images/ayo-customizer-color.png" title="Customizer Color"><img src="images/ayo-customizer-color.png" class="img-polaroid" title="Customizer Color"></a>
+			</div>
+			<div class="span2">
+			<p>Customizer Homepage</p>
+			<a href="images/ayo-customizer-homepage.png" title="Update Homepage"><img src="images/ayo-customizer-homepage.png" class="img-polaroid" title="Customizer Homepage"></a>
+			</div>
+			<div class="span2">
+			<p>Customizer Typography</p>
+			<a href="images/ayo-customizer-typography.png" title="Customizer Typography"><img src="images/ayo-customizer-typography.png" class="img-polaroid" title="Customizer Typography"></a>
+			</div>
+			<div class="span2">
+			<p>Customizer Footer</p>
+			<a href="images/ayo-customizer-footer.png" title="Customizer Footer"><img src="images/ayo-customizer-footer.png" class="img-polaroid" title="Customizer Footer"></a>
+			</div>
+		</div>
+	<br />
+
+</section>
+
+<!-- Plugins
+================================================== -->
+<section id="shortcode">
+	
+<div class="page-header">
+<h2>7. Shortcode</h2>
+</div>
+	<p>There is only one schortcode in this child theme and that is only to display <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a> icon. To use the shorcode will be explained below:</p>
+
+	<p>To use the shortcode: <code>[icon]</code></p>
+	<p>To change icon type: <code>[icon type="icon-display"]</code></p>	
+	<p>Full parameter: <code>[icon type="icon-display" color="#444444" size="24px"]</code></p>
+	<br />
+	<p>If you want more shortcodes, just take a look at plugins section for reference.</p>
+
+</section>
+
+<!-- Plugins
+================================================== -->
+<section id="plugins">
+	
+<div class="page-header">
+<h2>8. Plugins</h2>
+</div>
+	<p>These are the lists of plugins that we already tested with AyoShop child theme.</p>
+	<p class="lead">List of plugins that support Ayo shop child theme:</p>
+	<ul>
+		<li><a href="http://wordpress.org/extend/plugins/woocommerce/">WooCommerce</a></li>
+		<li><a href="http://wordpress.org/extend/plugins/genesis-connect-woocommerce/">Genesis Connect WooCommerce</a></li>
+		<li><a href="http://wordpress.org/extend/plugins/bbPress/">bbPress</a> <small>(min version 2.1+)</small></li>
+		<li><a href="http://wordpress.org/extend/plugins/bbpress-genesis-extend/">bbPress Genesis Extend</a></li>
+		<li><a href="http://wordpress.org/extend/plugins/genesis-simple-sidebars/">Genesis Simple Sidebars</a></li>
+		<li><a href="http://wordpress.org/extend/plugins/genesis-simple-menus/">Genesis Simple Menus</a></li>
+	</ul>
+	<br />
+	<p class="lead">Recommended Plugins:</p>
+	<ul>
+		<li><a href="http://wordpress.org/extend/plugins/genesis-toolbar-extras/">Genesis Toolbar Extras</a></li>
+		<li><a href="http://www.themezilla.com/plugins/">Zilla Plugins</a></li>
+		<li><a href="https://github.com/sy4mil/Aqua-Page-Builder">Aqua Page Builder</a></li>
+		<li><a href="http://www.wpexplorer.com/symple-shortcodes">Symple Shorcode</a></li>
+		<li><a href="http://wordpress.org/extend/plugins/contact-form-7/">Contact Form 7</a></li>
+		<li><a href="http://wordpress.org/extend/plugins/w3-total-cache/">W3 Total Cache</a> or <a href="http://wordpress.org/extend/plugins/wp-super-cache/">Wp Super Cache</a></li>
+	</ul>
+	<br />
+	<p class="lead">Commercial Plugins:</p>
+	<ul>
+		<li><a href="http://ayothemes.com/go/gravityforms">Gravity Froms</a></li>
+		<li><a href="http://codecanyon.net/item/slider-revolution-responsive-wordpress-plugin/2751380?ref=designmodo">Revolution Slider</a></li>
+	</ul>
+
+	<p>More recommendations will come.</p>
+</section>
+
+<!-- Localization
+================================================== -->
+<section id="localization">
+	
+<div class="page-header">
+<h2>9. Translation and Localization</h2>
+</div>
+
+<p>Localization files <span class="label label-important">.po</span> and <span class="label label-important">.mo</span> for translation are already included at AyoShop Child theme.</p>
+<h4>Translating WordPress</h4>
+<ol>
+	<li>Visit <a href="http://codex.wordpress.org/WordPress_in_Your_Language">WordPress in your language</a>.</li>
+	<li>Download language files <span class="label label-important">.po</span> and <span class="label label-important">.mo</span> that you want and use it at your WordPress installation ( wp-content &rarr; languages ). If the <b>language</b> folder does not exist, just create it.</li>
+	<li>Open wp-config.php and give the ID of your language. <code>define('WPLANG', 'LANGUAGE ID')</code>. Take a look at <a href="http://codex.wordpress.org/WordPress_in_Your_Language">http://codex.wordpress.org/WordPress_in_Your_Language</a> to find out the ID of each language.</li>
+</ol>
+<h4>Translating Genesis Framework</h4>
+<ol>
+	<li>Install and activate <a href="http://wordpress.org/extend/plugins/genesis-translations/">Genesis Translations</a> plugin.</li>
+</ol>
+<h4>Translating Genesis Child Theme</h4>
+<ol>
+	<li>Download and Install <a href="http://www.poedit.net/download.php">Poedit</a>.</li>
+	<li>Open <span class="label label-important">ayoshop.po</span> file with Poedit.</li>
+	<li>Translate the source text at translation box.</li>
+	<li>Save the file and give the file name depending on your language <b>ID</b>. File &rarr; Save As &rarr; Language <b>ID</b>. (e.g. de_DE, fr_FR, etc). Poedit will automaticly generate <span class="label label-important">.mo</span> file.</li>
+</ol>
+
+<h4>This video will explain how to translate Gensis Child theme:</h4>
+
+<div class="img-polaroid">
+<iframe src="http://player.vimeo.com/video/54504274?badge=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</div>
+
+
+</section>
+
+<!-- Localization
+================================================== -->
+<section id="xml">
+	
+	<div class="page-header">
+	<h2>10. Demo Data (xml)</h2>
+	</div>
+
+	<p>There are two version of sample data.</p>
+
+	<ul>
+		<li><span class="label label-important">ayoshop.xml</span> : All contents + WooCommerce content.</li>
+		<li><span class="label label-important">ayo-non-shop.xml</span> : All contents <b>without</b> WooCommerce content.</li>
+	</ul>
+
+	<p><small>*If you import ayoshop.xml while WooCommerce not activated, the import process will not work as expected.</small></p>
+</section>
+
+<!-- Source and Credits
+================================================== -->
+<section id="sourceandcredits">
+	
+	<div class="page-header">
+	<h2>11. Source and Credits</h2>
+	</div>
+	
+	<p>We've used the following images, icons, fonts or other files as listed below.</p>
+	<h4>Scripts and libraries:</h4>
+	<ul>
+		<li><a href="http://jquery.com/">jQuery</a> by <a href="http://ejohn.org/">John Resig</a></li>
+		<li><a href="https://github.com/scottjehl/Respond">Respond.js</a> by <a href="http://scottjehl.com/">Scott Jehl</a></li>
+		<li><a href="http://selectivizr.com/">Selectivizr</a> by <a href="http://www.keithclark.co.uk/">Keith Clark</a></li>
+		<li><a href="http://fitvidsjs.com/">Fitvidsjs</a> by <a href="http://css-tricks.com">Chris Coyier</a> and <a href="http://daverupert.com">Dave Rupert</a></li>
+		<li><a href="http://github.com/mambows/mobilemenu">Mobile Menu</a> by <a href="https://github.com/mambows">Arif a.k. mambows</a></li>
+		<li><a href="http://www.woothemes.com/flexslider/">Flexslider</a> by <a href="http://www.woothemes.com/">Woothemes</a></li>
+		<li><a href="http://wptheming.com/options-framework-theme/">Options Framework Theme</a> by <a href="http://wptheming.com/">Davin Says</a></li>
+	</ul>
+	<h4>Images, Icon and Font:</h4>
+	<ul>
+		<li><a href="http://sxc.hu">sxc.hu</a></li>
+		<li><a href="https://google.com/webfonts">Google Webfonts</a></li>
+		<li><a href="http://iconsweets2.com/">Icon Sweet 2</a></li>
+		<li><a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a></li>
+	</ul>
+
+</section>
+
+<!-- Changelog
+================================================== -->
+<section id="changelog">
+<div class="page-header">
+<h2>12. Changelog</h2>
+</div>
+
+<h4>Version 1.1</h4>
+<pre>
+1.	Update Screenshot v1.1
+2.	Update Options Framework Theme into v1.4 - ayoshop/lib/admin/
+3. 	Add autoupdate theme feature (beta)
+4.	Add bbPress compatibility - ayoshop/lib/functions/theme-bbpress.php
+5.	Conditional statement for bbPress - ayoshop/lib/functions/theme-tweaks.php
+6.	Update translation - ayoshop/languages/
+7.	Fix plural and singular for translation - ayoshop/lib/functions/theme-woocommerce.php
+8.	Remove unncessary array - ayoshop/lib/functions/theme-functions.php
+9.	Update stylesheet for main style
+10.	Update stylesheet for responsive style
+11.	Add stylesheet Contact form 7
+12.	Add stylesheet for bbPress - ayoshop/lib/css/ayo-bbpress.css
+13.	Separate files so it will be more manageable for future development.
+14.	Fix some minor bugs
+15.	HTML5 Docktype to make it compatible with WooCommerce.
+16.	Prepare for Genesis 1.9
+</pre>
+</section>
+<br />
+<h4>Version 1.0</h4>
+<pre>
+1. Initial Release
+</pre>
+
+<!-- Outro
+================================================== -->
+<section id="outro">
+<div class="page-header">
+<h2>Outro</h2>
+</div>
+
+<p>Once again, thank you so much if you have already downloaded the Ayo Shop child theme. </p>
+<br />
+<p class="pull-right">- AyoThemes & Designmodo</p>
+
+</section>
+
+</div>
+</div>
+
+</div>
+
+<!-- Footer
+================================================== -->
+<footer class="footer">
+<div class="container">
+<p class="pull-right"><a href="#">Back to top</a></p>
+<p>Designed and built with all the love in the world by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a> for <a href="http://designmodo.com" target="_blank">Designmodo</a> .</p>
+<p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+<p><a href="http://glyphicons.com">Glyphicons Free</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+<ul class="footer-links">
+<li><a href="http://blog.getbootstrap.com">Blog</a></li>
+<li class="muted">&middot;</li>
+<li><a href="https://github.com/twitter/bootstrap/issues?state=open">Issues</a></li>
+<li class="muted">&middot;</li>
+<li><a href="https://github.com/twitter/bootstrap/wiki">Roadmap and changelog</a></li>
+</ul>
+</div>
+</footer>
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/google-code-prettify/prettify.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/application.js"></script>
+
+
+
+</body>
+</html>
