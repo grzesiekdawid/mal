@@ -5,6 +5,20 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 }
 ?>
 <?php get_header(); ?>
+
+    <?php if ( $woo_options[ 'woo_homepage_banner' ] == "true" ) { ?>
+        
+        <div class="homepage-banner">
+            <?php
+                if ( $woo_options[ 'woo_homepage_banner' ] == "true" ) { $banner = $woo_options['woo_homepage_banner_path']; }
+                if ( $woo_options[ 'woo_homepage_banner' ] == "true" && is_ssl() ) { $banner = preg_replace("/^http:/", "https:", $woo_options['woo_homepage_banner_path']); }
+            ?>
+                <img src="<?php echo $banner; ?>" alt="" />
+            <h1><span><?php echo $woo_options['woo_homepage_banner_headline']; ?></span></h1>
+            <div class="description"><?php echo wpautop($woo_options['woo_homepage_banner_standfirst']); ?></div>
+        </div>
+        
+    <?php } ?>
        
     <div id="content" class="col-full">
     	

@@ -55,7 +55,8 @@ INDEX
   }
   ul.nav li {
     position: relative;
-    float: left;
+    /*float: left;*/
+    display:inline-block;
     zoom: 1;
     list-style: none;
   }
@@ -94,6 +95,13 @@ INDEX
     visibility: visible;
     display: block;
   }
+  ul.nav ul.children .delimiter{
+    display: none;
+  }
+  ul.nav ul.children li{
+    display:block;
+  }
+  
   /* 2. TOP NAVIGATION (Add top navigation presentational styles here) */
   #top {
     background: #f7f7f7;
@@ -184,7 +192,7 @@ INDEX
     margin-top: .382em;
   }
   #header #navigation ul.nav {
-    float: right;
+    /*float: right;*/
     /* LEVEL 2 */
     /* LEVEL 3 */
   }
@@ -575,8 +583,9 @@ INDEX
     content: "S";
   }
   #header {
-    padding-bottom: 1.618em;
-    padding-top: 3.631em;
+/*    padding-bottom: 1.618em;
+    padding-top: 3.631em;*/
+    text-align:center;
   }
   #header:after {
     content: "\0020";
@@ -586,11 +595,11 @@ INDEX
     clear: both;
   }
   #header hgroup {
-    float: left;
+    /*float: left;*/
   }
   #header #navigation {
-    float: right;
-    clear: none;
+/*    float: right;
+    clear: none;*/
     border: 0;
     background: 0;
     -webkit-box-shadow: none;

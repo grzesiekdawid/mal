@@ -472,7 +472,7 @@ ul.nav li a {
 }
 #navigation {
   clear: both;
-  margin-bottom: 2.618em;
+  /*margin-bottom: 2.618em;*/
   display: none;
 }
 #navigation ul {
@@ -577,8 +577,10 @@ ul.nav li a {
 /* 2.3 Header */
 #header {
   padding: 1.618em 0 0;
-  margin-bottom: 3.631em;
-  border-bottom: 4px double #e8e4e3;
+  /*margin-bottom: 3.631em;*/
+  margin-bottom: 0.2em;
+  /*border-bottom: 4px double #e8e4e3;*/
+  /*border-bottom: 1px solid #e8e4e3;*/
   clear: both;
   position: relative;
 }
@@ -599,7 +601,7 @@ ul.nav li a {
 }
 #header hgroup {
   position: relative;
-  margin-bottom: 1.618em;
+  /*margin-bottom: 1.618em;*/
 }
 #header hgroup:after {
   content: "\0020";
