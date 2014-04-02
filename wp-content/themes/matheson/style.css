@@ -6796,6 +6796,8 @@ input, textarea {
 .header-img {
   width: 100%;
   display: block;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #home-carousel .carousel-caption {
@@ -7025,11 +7027,13 @@ input, textarea {
   text-transform: uppercase;
   color: inherit;
   font-size: 14px;
-  border: 1px solid transparent;
+  border-right: 1px solid #dfdfdf;
+}
+.nav-justified > li:last-child > a {
+  border-right: 0px;
 }
 .nav-justified > li > a:hover, .nav-justified > li > a:focus {
   background: none;
-  border-color: inherit;
 }
 
 .nav-justified > li.current-menu-item > a {
@@ -7169,6 +7173,7 @@ input, textarea {
 .boxed #page {
   margin-left: auto;
   margin-right: auto;
+  max-width: 1000px;
 }
 
 #primary.centered {
@@ -8194,3 +8199,6 @@ a img.aligncenter {
 .sticky {
   display: block;
 }
+
+
+

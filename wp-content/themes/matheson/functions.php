@@ -137,7 +137,7 @@ function bavotasan_styles() {
 	$bavotasan_theme_options = bavotasan_theme_options();
 	?>
 <style>
-.boxed #page { max-width: <?php echo $bavotasan_theme_options['width'] + 180; ?>px; }
+.boxed #page { max-width: <?php echo $bavotasan_theme_options['width'] + 18; ?>px; }
 .container { max-width: <?php echo $bavotasan_theme_options['width']; ?>px; }
 </style>
 	<?php
