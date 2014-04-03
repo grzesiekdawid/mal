@@ -6668,6 +6668,7 @@ body.basic {
   color: #282828;
   font-family: Raleway, sans-serif;
   font-weight: normal;
+  padding-top: 20px;
 }
 .basic h1 a, .basic h2 a, .basic h3 a, .basic h4 a, .basic h5 a, .basic h6 a {
   color: #282828;
@@ -7038,7 +7039,7 @@ input, textarea {
 
 .nav-justified > li.current-menu-item > a {
   background: none;
-  border-color: inherit;
+  /*border-color: inherit;*/
 }
 
 .nav .open > a,
