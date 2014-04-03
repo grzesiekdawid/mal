@@ -305,7 +305,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   padding: 0 1.618em;
-  background: #fcfcfc;
+  background: #f7f7f7;
 }
 img {
   vertical-align: bottom;
@@ -517,6 +517,7 @@ ul.nav li a {
 #top .wc-nav {
   margin-bottom: 0;
   text-align: right;
+  padding-right:10px;
 }
 #top .wc-nav li {
   list-style: none;
@@ -673,10 +674,10 @@ ul.nav li a {
 }
 /* 2.6 Footer */
 .footer-wrap #footer:first-child {
-  border-top: 0;
+  /*border-top: 0;*/
 }
 #footer {
-  padding: 2.618em 0;
+  padding: 0.618em 0;
   border-top: 1px solid #e8e4e3;
   color: #877c78;
 }

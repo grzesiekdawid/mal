@@ -19,11 +19,11 @@ get_header(); ?>
 						<div class="next pull-right"><?php next_post_link( '%link', __( '%title &rarr;', 'matheson' ) ); ?></div>
 					</div><!-- #posts-pagination -->
 
-					<?php comments_template( '', true ); ?>
+					<?php // comments_template( '', true ); ?>
 
 				<?php endwhile; // end of the loop. ?>
 			</div>
-			<?php get_sidebar(); ?>
+			<?php // get_sidebar(); ?>
 		</div>
 	</div>
 

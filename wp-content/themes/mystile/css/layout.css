@@ -177,7 +177,7 @@ INDEX
   }
   #top .wc-nav li.cart a .contents {
     padding: .2em .618em;
-    background: #fff;
+    /*background: #fff;*/
     -webkit-border-radius: 1em;
     border-radius: 1em;
     -moz-background-clip: padding;
@@ -197,8 +197,8 @@ INDEX
     /* LEVEL 3 */
   }
   #header #navigation ul.nav > li a {
-    border: 1px solid #fcfcfc;
-    background: #fcfcfc;
+    border: 1px solid white;
+    /*background: #fcfcfc;*/
     font-weight: bold;
     position: relative;
     -webkit-border-radius: 0.236em;
@@ -610,7 +610,7 @@ INDEX
   .layout-full #main,
   .col-full,
   .no-sidebar #main {
-    max-width: 75.998em;
+    /*max-width: 75.998em;*/
     margin: 0 auto;
     width: 100%;
   }
@@ -970,4 +970,21 @@ INDEX
   .homepage-banner .description {
     font-size: 1.387em;
   }
+}
+
+#wrapper{
+  background-color: white;
+  border-left: 1px solid #877C78;
+  border-right: 1px solid #877C78;
+}
+#content{
+  max-width: 75.998em;
+}
+
+#footer{
+  border-top: 1px solid #877C78;
+}
+
+#header{
+  border-top: 1px solid #877C78;
 }
