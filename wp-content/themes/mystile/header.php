@@ -81,6 +81,7 @@ global $woo_options, $woocommerce;
 			<h3 class="nav-toggle"><a href="#navigation">&#9776; <span><?php _e('Navigation', 'woothemes'); ?></span></a></h3>
 
 		</hgroup>
+		<br />
 
         <?php woo_nav_before(); ?>
 
@@ -94,7 +95,11 @@ global $woo_options, $woocommerce;
 	        <ul id="main-nav" class="nav fl">
 				<?php if ( is_page() ) $highlight = 'page_item'; else $highlight = 'page_item current_page_item'; ?>
 				<li class="<?php echo $highlight; ?>"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php _e( 'Home', 'woothemes' ); ?></a></li>
-				<?php wp_list_pages( 'sort_column=menu_order&depth=6&title_li=&exclude=' ); ?>
+				<?php
+					$menu = wp_list_pages( 'sort_column=menu_order&title_li=&exclude=&echo=0' );
+					$menu = str_replace('<li ','<span class="delimiter">|</span><li ',$menu);
+					echo $menu;
+				?>
 			</ul><!-- /#nav -->
 	        <?php } ?>
 
