@@ -8,8 +8,8 @@
 <html <?php language_attributes(); ?>>
 <head>
 
-	<?php		
-		/** 
+	<?php
+		/**
 		 * travelify_title hook
 		 *
 		 * HOOKED_FUNCTION_NAME PRIORITY
@@ -20,12 +20,12 @@
 		 */
 		do_action( 'travelify_title' );
 
-		/** 
+		/**
 		 * travelify_meta hook
 		 */
 		do_action( 'travelify_meta' );
 
-		/** 
+		/**
 		 * travelify_links hook
 		 *
 		 * HOOKED_FUNCTION_NAME PRIORITY
@@ -37,7 +37,7 @@
 		 */
 		do_action( 'travelify_links' );
 
-		/** 
+		/**
 		 * This hook is important for wordpress plugins and other many things
 		 */
 		wp_head();
@@ -47,7 +47,7 @@
 
 <body <?php body_class(); ?>>
 	<?php
-		/** 
+		/**
 		 * travelify_before hook
 		 */
 		do_action( 'travelify_before' );
@@ -55,14 +55,14 @@
 
 	<div class="wrapper">
 		<?php
-			/** 
+			/**
 			 * travelify_before_header hook
 			 */
 			do_action( 'travelify_before_header' );
 		?>
 		<header id="branding" >
 			<?php
-				/** 
+				/**
 				 * travelify_header hook
 				 *
 				 * HOOKED_FUNCTION_NAME PRIORITY
@@ -70,17 +70,22 @@
 				 * travelify_headerdetails 10
 				 */
 				do_action( 'travelify_header' );
+
+				if( !is_home() && !is_front_page() ) {
+					travelify_featured_post_slider();
+				}
+
 			?>
 		</header>
 		<?php
-			/** 
+			/**
 			 * travelify_after_header hook
 			 */
 			do_action( 'travelify_after_header' );
 		?>
 
 		<?php
-			/** 
+			/**
 			 * travelify_before_main hook
 			 */
 			do_action( 'travelify_before_main' );

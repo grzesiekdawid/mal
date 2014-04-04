@@ -5,8 +5,6 @@
  */
 ?>
 
-
-
 <?php get_header(); ?>
 
 <?php
@@ -15,12 +13,6 @@
 	 */
 	do_action( 'travelify_before_main_container' );
 ?>
-
-
-<?php
-	travelify_featured_post_slider();
-?>
-
 <div id="container">
 	<?php
 		/**
