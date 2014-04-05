@@ -494,6 +494,10 @@ input, textarea {
 		position: relative;
 		float: none;
 	}
+
+	.nav-justified > li > a {
+		border:0;
+	}
 }
 
 /* =Jumbotron
