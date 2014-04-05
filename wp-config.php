@@ -30,10 +30,9 @@ if ( 'GREG' == getenv('Environment') ) {
 } else {
   define('DB_NAME', 'xr178774_mal');
   define('DB_USER', 'xr178774_mal');
-  define('DB_PASSWORD', 'Kang00r');
+  define('DB_PASSWORD', 'abcd1234');
   define('DB_HOST', 'localhost');
 }
-
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');

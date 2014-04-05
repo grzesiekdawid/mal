@@ -790,3 +790,11 @@ function bavotasan_body_class( $classes ) {
 
 	return $classes;
 }
+
+
+function display_slider_header_home() {
+	if ( is_single() && function_exists('easingsliderlite') ) {
+	    easingsliderlite();
+	}
+};
+add_action('genesis_before_post', 'display_slider_header_home');

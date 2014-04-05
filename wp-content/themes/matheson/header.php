@@ -53,7 +53,8 @@
 
 		<?php
 		// Header image section
-		header_images();
+		//header_images();
+		easingsliderlite();
 		?>
 
 		<main>

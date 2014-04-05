@@ -341,10 +341,10 @@ if ( ! function_exists( 'travelify_featured_post_slider' ) ) :
  */
 function travelify_featured_post_slider() {
 	global $post;
-
+	global $travelify_theme_options_settings;
    $options = $travelify_theme_options_settings;
 
-   	global $travelify_featured_post_slider;
+   	
 	$travelify_featured_post_slider = '';
 	if( ( !$travelify_featured_post_slider = get_transient( 'travelify_featured_post_slider' ) ) && !empty( $options[ 'featured_post_slider' ] ) ) {
 		$travelify_featured_post_slider .= '
