@@ -18,7 +18,7 @@
 /** The name of the database for WordPress */
 
 if ( 'GREG' == getenv('Environment') ) {
-  define('DB_NAME', 'mal');
+  define('DB_NAME', 'xr178774_mal');
   define('DB_USER', 'root');
   define('DB_PASSWORD', 'komputer');
   define('DB_HOST', 'localhost');
