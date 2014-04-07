@@ -3654,7 +3654,7 @@ textarea.input-group-sm > .input-group-btn > .comment-reply-link,
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #428bca;
+  /*border-color: #428bca;*/
 }
 
 .nav .open > a .caret,
@@ -7029,10 +7029,10 @@ input, textarea {
   text-transform: uppercase;
   color: inherit;
   font-size: 14px;
-  border-right: 1px solid #dfdfdf!important;
+  border-right: 1px solid #dfdfdf;
 }
 .nav-justified > li:last-child > a {
-  border-right: 0px;
+  border-right:0;
 }
 .nav-justified > li > a:hover, .nav-justified > li > a:focus {
   background: none;
@@ -7047,7 +7047,7 @@ input, textarea {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: transparent;
-  border-color: inherit;
+  /*border-color: inherit;*/
 }
 
 .navbar-inner {
