@@ -7057,7 +7057,7 @@ input, textarea {
 .navbar-toggle, .social-toggle {
   border-color: #dddddd;
   position: absolute;
-  top: 0;
+  top: 20px;
   right: 0;
   padding: 5px 14px;
   color: #aaa;
@@ -8206,5 +8206,61 @@ a img.aligncenter {
   display: block;
 }
 
-
-
+/*shoppig info panel*/
+.wc-nav{
+  margin-top: 2px;
+  text-align: right;
+  font-size: 0.9em;
+}
+.wc-nav li{
+  list-style: none;
+  display: inline-block;
+}
+.wc-nav li a{
+  color:#343434;
+  text-decoration:none;
+}
+.wc-nav li span span.amount{
+  margin-right: 10px;
+}
+.wc-nav li span span.contents{
+  margin-right: 0;
+}
+.wc-nav li.checkout{
+  margin-left: 20px;
+}
+@font-face {
+  font-family: 'WebSymbolsRegular';
+  src: url("typefaces/websymbols-regular-webfont.eot");
+  src: url("typefaces/websymbols-regular-webfont.eot?#iefix") format('embedded-opentype'), url("typefaces/websymbols-regular-webfont.woff") format('woff'), url("typefaces/websymbols-regular-webfont.ttf") format('truetype'), url("typefaces/websymbols-regular-webfont.svg#WebSymbolsRegular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url("typefaces/icomoon.eot");
+  src: url("typefaces/icomoon.eot?#iefix") format('embedded-opentype'), url("typefaces/icomoon.woff") format('woff'), url("typefaces/icomoon.ttf") format('truetype'), url("typefaces/icomoon.svg#icomoon") format('svg');
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+}
+.wc-nav li.checkout a:before {
+  font-family: 'WebSymbolsRegular';
+  display: inline-block;
+  vertical-align:top;
+  /*padding-top:1px;*/
+  font-size: .857em;
+  margin-right: .418em;
+  content: ")";
+  font-weight: normal;
+}
+.wc-nav li.cart a:before {
+  font-family: "icomoon";
+  display: inline-block;
+  font-size: .857em;
+  margin-right: .418em;
+  font-size: 1em;
+  content: "£";
+  font-weight: normal;
+}

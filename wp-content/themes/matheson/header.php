@@ -7,6 +7,7 @@
  *
  * @since 1.0.0
  */
+global $woocommerce;
 ?><!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" <?php language_attributes(); ?>><![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <?php language_attributes(); ?>><![endif]-->
@@ -28,6 +29,14 @@
 
 		<header id="header">
 			<div class="container header-meta">
+				<?php
+					if ( class_exists( 'woocommerce' ) ) {
+						echo '<ul class="wc-nav">';
+							woocommerce_cart_link();
+							echo '<li class="checkout"><a href="'.esc_url($woocommerce->cart->get_checkout_url()).'" title="Proceed to payment">'.__('Checkout','woothemes').'</a></li>';
+						echo '</ul>';
+					}
+				?>
 				<div id="site-meta">
 					<h1 class="site-title" >
 						<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
