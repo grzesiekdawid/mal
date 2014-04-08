@@ -6672,7 +6672,7 @@ body.basic {
   color: #282828;
   font-family: Raleway, sans-serif;
   font-weight: normal;
-  padding-top: 20px;
+  /*padding-top: 20px;*/
 }
 .basic h1 a, .basic h2 a, .basic h3 a, .basic h4 a, .basic h5 a, .basic h6 a {
   color: #282828;
@@ -6772,7 +6772,7 @@ input, textarea {
 
 #site-meta {
   text-align: center;
-  margin: 40px 0 60px;
+  /*margin: 40px 0 60px;*/
 }
 @media (max-width: 768px) {
   #site-meta {
@@ -8214,6 +8214,8 @@ a img.aligncenter {
   margin-top: 2px;
   text-align: right;
   font-size: 0.9em;
+/*  position: absolute;
+  top: 0;*/
 }
 .wc-nav li{
   list-style: none;
@@ -8266,4 +8268,8 @@ a img.aligncenter {
   font-size: 1em;
   content: "£";
   font-weight: normal;
+}
+
+.header_image{
+  width:400px;
 }

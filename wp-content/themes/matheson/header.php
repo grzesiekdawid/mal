@@ -39,7 +39,10 @@ global $woocommerce;
 				?>
 				<div id="site-meta">
 					<h1 class="site-title" >
-						<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+						<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+						<?php //bloginfo( 'name' ); ?>
+						<img src="<?php echo esc_url( home_url() ); ?>/wp-includes/images/header.png" alt="<?php bloginfo( 'name' ); ?>" class="header_image" />
+						</a>
 					</h1>
 
 					<h2 class="site-description">
