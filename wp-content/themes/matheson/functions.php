@@ -798,3 +798,30 @@ function display_slider_header_home() {
 	}
 };
 add_action('genesis_before_post', 'display_slider_header_home');
+
+//shopping panel
+add_filter( 'add_to_cart_fragments', 'header_add_to_cart_fragment' );
+function header_add_to_cart_fragment( $fragments ) {
+	global $woocommerce;
+	ob_start();
+	woocommerce_cart_link();
+	$fragments['a.cart-parent'] = ob_get_clean();
+	return $fragments;
+}
+
+// Handle cart in header fragment for ajax add to cart
+function woocommerce_cart_link() {
+	global $woocommerce;
+	?>
+	<li class="cart">
+	<a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>" class="cart-info">
+		<span>
+			<?php
+			echo $woocommerce->cart->get_cart_total();
+			echo '<span class="contents">' . sprintf(_n('%d item', '%d items', $woocommerce->cart->get_cart_contents_count(), 'woothemes'), $woocommerce->cart->get_cart_contents_count()) . '</span>';
+			?>
+		</span>
+	</a>
+	</li>
+	<?php
+}
