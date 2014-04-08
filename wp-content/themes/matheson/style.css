@@ -8208,3 +8208,44 @@ a img.aligncenter {
 
 
 
+#content {
+  margin: 20px;
+  font-family: times;
+}
+
+.separator {
+
+  margin-bottom: 30px;
+
+  border-width: 1px;
+  border-style: dotted;
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+}
+
+.attachment-shop_catalog {
+  border-width: 2px;
+  border-style: dotted;
+  padding: 7px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

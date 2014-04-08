@@ -7,4 +7,7 @@
  * @version     2.0.0
  */
 ?>
+
+<div class='separator'></div>
+
 <ul class="products">
