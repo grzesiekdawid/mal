@@ -2923,8 +2923,10 @@ input[type="button"].btn-block {
   display: none;
   float: left;
   min-width: 120px;
+  max-width: 250px;
   padding: 5px 0;
-  margin: 2px 0 0;
+  /*margin: 2px 0 0;*/
+  margin: 0 auto;
   font-size: 14px;
   list-style: none;
   background-color: #ffffff;
@@ -2935,6 +2937,7 @@ input[type="button"].btn-block {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box;
   width:100%;
+  text-align: center;
 }
 
 .dropdown-menu.pull-right {
@@ -6669,7 +6672,7 @@ body.basic {
   color: #282828;
   font-family: Raleway, sans-serif;
   font-weight: normal;
-  padding-top: 20px;
+  /*padding-top: 20px;*/
 }
 .basic h1 a, .basic h2 a, .basic h3 a, .basic h4 a, .basic h5 a, .basic h6 a {
   color: #282828;
@@ -6769,7 +6772,7 @@ input, textarea {
 
 #site-meta {
   text-align: center;
-  margin: 40px 0 60px;
+  /*margin: 40px 0 60px;*/
 }
 @media (max-width: 768px) {
   #site-meta {
@@ -7057,7 +7060,7 @@ input, textarea {
 .navbar-toggle, .social-toggle {
   border-color: #dddddd;
   position: absolute;
-  top: 0;
+  top: 20px;
   right: 0;
   padding: 5px 14px;
   color: #aaa;
@@ -8206,7 +8209,70 @@ a img.aligncenter {
   display: block;
 }
 
+/*shoppig info panel*/
+.wc-nav{
+  margin-top: 2px;
+  text-align: right;
+  font-size: 0.9em;
+/*  position: absolute;
+  top: 0;*/
+}
+.wc-nav li{
+  list-style: none;
+  display: inline-block;
+}
+.wc-nav li a{
+  color:#343434;
+  text-decoration:none;
+}
+.wc-nav li span span.amount{
+  margin-right: 10px;
+}
+.wc-nav li span span.contents{
+  margin-right: 0;
+}
+.wc-nav li.checkout{
+  margin-left: 20px;
+}
+@font-face {
+  font-family: 'WebSymbolsRegular';
+  src: url("typefaces/websymbols-regular-webfont.eot");
+  src: url("typefaces/websymbols-regular-webfont.eot?#iefix") format('embedded-opentype'), url("typefaces/websymbols-regular-webfont.woff") format('woff'), url("typefaces/websymbols-regular-webfont.ttf") format('truetype'), url("typefaces/websymbols-regular-webfont.svg#WebSymbolsRegular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url("typefaces/icomoon.eot");
+  src: url("typefaces/icomoon.eot?#iefix") format('embedded-opentype'), url("typefaces/icomoon.woff") format('woff'), url("typefaces/icomoon.ttf") format('truetype'), url("typefaces/icomoon.svg#icomoon") format('svg');
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+}
+.wc-nav li.checkout a:before {
+  font-family: 'WebSymbolsRegular';
+  display: inline-block;
+  vertical-align:top;
+  /*padding-top:1px;*/
+  font-size: .857em;
+  margin-right: .418em;
+  content: ")";
+  font-weight: normal;
+}
+.wc-nav li.cart a:before {
+  font-family: "icomoon";
+  display: inline-block;
+  font-size: .857em;
+  margin-right: .418em;
+  font-size: 1em;
+  content: "£";
+  font-weight: normal;
+}
 
+.header_image{
+  width:400px;
+}
 
 #content {
   margin: 20px;
@@ -8224,32 +8290,14 @@ a img.aligncenter {
   border-right: none;
 }
 
-.attachment-shop_catalog {
+.attachment-shop_cat alog {
   border-width: 2px;
   border-style: dotted;
   padding: 7px;
 }
 
-.attachment-shop_single {
+.attachment-shop_sin gle {
   border-width: 2px;
   border-style: dotted;
   padding: 7px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
