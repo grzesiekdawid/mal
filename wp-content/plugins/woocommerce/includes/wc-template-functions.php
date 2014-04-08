@@ -700,7 +700,8 @@ if ( ! function_exists( 'woocommerce_output_product_data_tabs' ) ) {
 	 * @return void
 	 */
 	function woocommerce_output_product_data_tabs() {
-		wc_get_template( 'single-product/tabs/tabs.php' );
+		// product description tab below detail product view
+		// wc_get_template( 'single-product/tabs/tabs.php' );
 	}
 }
 if ( ! function_exists( 'woocommerce_template_single_title' ) ) {
@@ -890,9 +891,9 @@ if ( ! function_exists( 'woocommerce_quantity_input' ) ) {
 
 	/**
 	 * Output the quantity input for add to cart forms.
-	 * 
+	 *
 	 * @param  array $args Args for the input
-	 * @param  WC_Product|null $product 
+	 * @param  WC_Product|null $product
 	 * @param  boolean $echo Whether to return or echo
 	 * @return void|string
 	 */
@@ -1015,7 +1016,7 @@ if ( ! function_exists( 'woocommerce_sort_product_tabs' ) ) {
 	 * @return array
 	 */
 	function woocommerce_sort_product_tabs( $tabs = array() ) {
-		
+
 		// Make sure the $tabs parameter is an array
 		if ( ! is_array( $tabs ) ) {
 			trigger_error( "Function woocommerce_sort_product_tabs() expects an array as the first parameter. Defaulting to empty array." );
@@ -1258,8 +1259,8 @@ if ( ! function_exists( 'woocommerce_breadcrumb' ) ) {
 		) );
 
 		$args = wp_parse_args( $args, $defaults );
-
-		wc_get_template( 'global/breadcrumb.php', $args );
+		// home - shop
+		// wc_get_template( 'global/breadcrumb.php', $args );
 	}
 }
 
@@ -1574,7 +1575,7 @@ if ( ! function_exists( 'woocommerce_form_field' ) ) {
 	 * @param mixed $args
 	 * @param string $value (default: null)
 	 * @return void
-	 * @todo This function needs to be broken up in smaller pieces 
+	 * @todo This function needs to be broken up in smaller pieces
 	 */
 	function woocommerce_form_field( $key, $args, $value = null ) {
 		$defaults = array(
@@ -1796,7 +1797,7 @@ if ( ! function_exists( 'get_product_search_form' ) ) {
 	 * @subpackage	Forms
 	 * @param bool $echo (default: true)
 	 * @return string
-	 * @todo This function needs to be broken up in smaller pieces 
+	 * @todo This function needs to be broken up in smaller pieces
 	 */
 	function get_product_search_form( $echo = true  ) {
 		do_action( 'get_product_search_form'  );

@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 add_filter( 'body_class', 'wc_body_class' );
 add_filter( 'post_class', 'wc_product_post_class', 20, 3 );
 
-/** 
+/**
  * WP Header
  *
  * @see  wc_products_rss_feed()
@@ -55,7 +55,7 @@ add_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 )
  *
  * @see woocommerce_get_sidebar()
  */
-add_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+// add_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 
 /**
  * Archive descriptions
