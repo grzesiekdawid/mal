@@ -63,7 +63,9 @@ global $woocommerce;
 		<?php
 		// Header image section
 		//header_images();
-		easingsliderlite();
+		if ( !is_single($post) ) {
+			easingsliderlite();
+		}
 		?>
 
 		<main>

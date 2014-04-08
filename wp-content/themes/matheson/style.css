@@ -8230,7 +8230,11 @@ a img.aligncenter {
   padding: 7px;
 }
 
-
+.attachment-shop_single {
+  border-width: 2px;
+  border-style: dotted;
+  padding: 7px;
+}
 
 
 
