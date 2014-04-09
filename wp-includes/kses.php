@@ -476,7 +476,7 @@ if ( ! CUSTOM_TAGS ) {
  * @param array $allowed_protocols Optional. Allowed protocol in links.
  * @return string Filtered content with only allowed HTML elements
  */
-function wp_kses( $string, $allowed_html, $allowed_protocols = array() ) {
+function wp_kses( $string, $allowed_html=null, $allowed_protocols = array() ) {
 	if ( empty( $allowed_protocols ) )
 		$allowed_protocols = wp_allowed_protocols();
 	$string = wp_kses_no_null($string);
