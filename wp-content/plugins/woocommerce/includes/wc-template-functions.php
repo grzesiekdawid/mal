@@ -701,7 +701,7 @@ if ( ! function_exists( 'woocommerce_output_product_data_tabs' ) ) {
 	 */
 	function woocommerce_output_product_data_tabs() {
 		// product description tab below detail product view
-		// wc_get_template( 'single-product/tabs/tabs.php' );
+		wc_get_template( 'single-product/tabs/tabs.php' );
 	}
 }
 if ( ! function_exists( 'woocommerce_template_single_title' ) ) {
