@@ -6,7 +6,7 @@
 @tertiarytext: 	@primarytext;								/* Text on tertiary colour bg */
 @quaternary: 	desaturate( darken( @tertiary, 45%), 40% ); /* Price slider bg */
 
-/* =Custom Font
+/* =Custom Fonts
 -------------------------------------------------------------- */
 @font-face {
 	font-family: 'star';
@@ -103,7 +103,7 @@ p.demo_store {
 			position:absolute;
 			top: 0;
 			left: 1em;
-			font-family: sans-serif;
+			font-family: times;
 			font-size:1em;
 			line-height: 1.5;
 			text-align: center;
@@ -564,7 +564,7 @@ p.demo_store {
 		.border_radius(2px);
 		left: auto;
 		text-shadow:0 1px 0 @secondary + #111;
-		color: @secondarytext;
+		color: #282828;
 		.darkorlighttextshadow( @secondarytext );
 		border: 1px solid darken( @secondary, 20 );
 		.vertical_gradient( @secondary, darken( @secondary, 10 ) );
@@ -598,7 +598,9 @@ p.demo_store {
 				background: url(../images/ajax-loader.gif) center no-repeat rgba(255,255,255,0.65);
 			}
 		}
-
+		&:hover{
+			color:#2A6496;
+		}
 		&.added {
 			&:before {
 				position:absolute;
@@ -1062,19 +1064,28 @@ p.demo_store {
 	}
 
 	table.shop_table {
-		border: 1px solid rgba(0,0,0,0.1);
-		margin: 0px -1px 24px 0px;
+		border: 0;
+		margin: 0px auto 24px auto;
 		text-align:left;
-		width: 100%;
-		border-collapse: separate;
-		.border_radius(5px);
+		width: auto;
+		font-family: times;
 		th {
 			font-weight:bold;
 			line-height: 18px;
 			padding: 9px 12px;
+			border:0;
+			&:first-child{
+				-webkit-border-top-left-radius: 10px;
+				-moz-border-top-left-radius: 10px;
+				border-top-left-radius: 10px;
+			}
+			&:last-child{
+				-webkit-border-top-right-radius: 10px;
+				-moz-border-top-right-radius: 10px;
+				border-top-right-radius: 10px;
+			}
 		}
 		td {
-			border-top: 1px solid rgba(0,0,0,0.1);
 			padding: 6px 12px;
 			vertical-align: middle;
 			small {
@@ -1148,6 +1159,7 @@ p.demo_store {
 		}
 		th, td {
 			vertical-align: middle;
+			border:1 px solid #282828;
 		}
 		a.remove {
 			display:block;
@@ -1166,6 +1178,8 @@ p.demo_store {
 			color: #fff;
 		}
 		td.actions {
+			padding-right:7px;
+			border:0;
 			.coupon {
 				.input-text {
 					float:left;
@@ -1843,4 +1857,8 @@ p.demo_store {
 			}
 		}
 	}
+}
+
+.hide{
+	display: none;
 }

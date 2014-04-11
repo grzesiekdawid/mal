@@ -6724,7 +6724,7 @@ table {
 }
 table td, table th {
   padding: 8px;
-  border: 1px solid #ddd;
+  border: 1px solid #eee;
   text-align: left;
 }
 table th {
@@ -7184,7 +7184,9 @@ input, textarea {
   margin-right: auto;
   max-width: 1000px;
 }
-
+#primary{
+  width: 100%;
+}
 #primary.centered {
   float: none !important;
   margin-left: auto;
