@@ -8301,3 +8301,28 @@ a img.aligncenter {
   border-style: dotted;
   padding: 7px;
 }
+
+#product-description {
+  margin-top: -40px;
+  float: right;
+  width: 48%;
+}
+
+#product-description-content {
+  padding-left: 20px;
+  color: grey;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
