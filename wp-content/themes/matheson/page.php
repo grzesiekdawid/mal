@@ -20,7 +20,7 @@ get_header();
 					?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 							<h1 class="entry-title"><?php the_title(); ?></h1>
-
+							<div class="separator"></div>
 						    <div class="entry-content">
 							    <?php the_content( __( 'Read more', 'matheson') ); ?>
 						    </div><!-- .entry-content -->

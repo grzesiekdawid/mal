@@ -13,9 +13,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
 
-	<h2><?php _e( 'Cart Totals', 'woocommerce' ); ?></h2>
+	<h2 class="hide"><?php _e( 'Cart Totals', 'woocommerce' ); ?></h2>
 
-	<table cellspacing="0">
+	<table cellspacing="0" class="hide">
 
 		<tr class="cart-subtotal">
 			<th><?php _e( 'Cart Subtotal', 'woocommerce' ); ?></th>

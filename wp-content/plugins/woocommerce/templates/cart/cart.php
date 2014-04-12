@@ -1,4 +1,4 @@
-<?php
+'<?php
 /**
  * Cart Page
  *
@@ -11,27 +11,27 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $woocommerce;
 
-wc_print_notices();
+//wc_print_notices();
 
-do_action( 'woocommerce_before_cart' ); ?>
+//do_action( 'woocommerce_before_cart' ); ?>
 
-<form action="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" method="post">
+<form action="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" method="post" id="cartForm">
 
-<?php do_action( 'woocommerce_before_cart_table' ); ?>
+<?php //do_action( 'woocommerce_before_cart_table' ); ?>
 
 <table class="shop_table cart" cellspacing="0">
 	<thead>
-		<tr>
-			<th class="product-remove">&nbsp;</th>
-			<th class="product-thumbnail">&nbsp;</th>
+		<tr class="rounded_cart_table">
+			<th class="product-remove hideOnMobile" style="width:20px;">aa&nbsp;</th>
+			<th class="product-thumbnail hideOnMobile" style="width:50px;">aa&nbsp;</th>
 			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
 			<th class="product-price"><?php _e( 'Price', 'woocommerce' ); ?></th>
 			<th class="product-quantity"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
-			<th class="product-subtotal"><?php _e( 'Total', 'woocommerce' ); ?></th>
+			<th class="product-subtotal hideOnMobile"><?php _e( 'Total', 'woocommerce' ); ?></th>
 		</tr>
 	</thead>
 	<tbody>
-		<?php do_action( 'woocommerce_before_cart_contents' ); ?>
+		<?php //do_action( 'woocommerce_before_cart_contents' ); ?>
 
 		<?php
 		foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
@@ -42,13 +42,13 @@ do_action( 'woocommerce_before_cart' ); ?>
 				?>
 				<tr class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
 
-					<td class="product-remove">
+					<td class="product-remove hideOnMobile">
 						<?php
 							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf( '<a href="%s" class="remove" title="%s">&times;</a>', esc_url( WC()->cart->get_remove_url( $cart_item_key ) ), __( 'Remove this item', 'woocommerce' ) ), $cart_item_key );
 						?>
 					</td>
 
-					<td class="product-thumbnail">
+					<td class="product-thumbnail hideOnMobile">
 						<?php
 							$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 
@@ -97,7 +97,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						?>
 					</td>
 
-					<td class="product-subtotal">
+					<td class="product-subtotal hideOnMobile">
 						<?php
 							echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key );
 						?>
@@ -107,10 +107,14 @@ do_action( 'woocommerce_before_cart' ); ?>
 			}
 		}
 
+
 		do_action( 'woocommerce_cart_contents' );
 		?>
+
 		<tr>
-			<td colspan="6" class="actions">
+		<td class="hideOnMobile" style="border:0;"></td>
+		<td class="hideOnMobile" style="border:0;"></td>
+			<td colspan="3" class="actions">
 
 				<?php if ( WC()->cart->coupons_enabled() ) { ?>
 					<div class="coupon">
@@ -121,18 +125,18 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 					</div>
 				<?php } ?>
-
-				<input type="submit" class="button" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" /> <input type="submit" class="checkout-button button alt wc-forward" name="proceed" value="<?php _e( 'Proceed to Checkout', 'woocommerce' ); ?>" />
-
+				<input type="submit" class="button" name="update_cart" value="<?php _e( 'Update', 'woocommerce' ); ?>" /> <input type="submit" class="button" name="proceed" value="<?php _e( 'Checkout', 'woocommerce' ); ?>" />
 				<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
 
 				<?php wp_nonce_field( 'woocommerce-cart' ); ?>
 			</td>
+			<td class="hideOnMobile"><b><?php wc_cart_totals_subtotal_html(); ?></b></td>
 		</tr>
 
 		<?php do_action( 'woocommerce_after_cart_contents' ); ?>
+
+
 	</tbody>
-</table>
 
 <?php do_action( 'woocommerce_after_cart_table' ); ?>
 
@@ -144,7 +148,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 	<?php woocommerce_cart_totals(); ?>
 
-	<?php woocommerce_shipping_calculator(); ?>
+
 
 </div>
 
