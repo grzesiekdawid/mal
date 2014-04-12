@@ -1,4 +1,4 @@
-'<?php
+<?php
 /**
  * Cart Page
  *
@@ -14,6 +14,7 @@ global $woocommerce;
 //wc_print_notices();
 
 //do_action( 'woocommerce_before_cart' ); ?>
+
 
 <form action="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" method="post" id="cartForm">
 
