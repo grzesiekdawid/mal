@@ -8,6 +8,6 @@
  */
 ?>
 
-<div class='separator'></div>
+<hr class="separator" />
 
 <ul class="products">
