@@ -11,14 +11,14 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $woocommerce;
 
-//wc_print_notices();
+wc_print_notices();
 
-//do_action( 'woocommerce_before_cart' ); ?>
+do_action( 'woocommerce_before_cart' ); ?>
 
 
 <form action="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" method="post" id="cartForm">
 
-<?php //do_action( 'woocommerce_before_cart_table' ); ?>
+<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
 <table class="shop_table cart" cellspacing="0">
 	<thead>
@@ -32,7 +32,7 @@ global $woocommerce;
 		</tr>
 	</thead>
 	<tbody>
-		<?php //do_action( 'woocommerce_before_cart_contents' ); ?>
+		<?php do_action( 'woocommerce_before_cart_contents' ); ?>
 
 		<?php
 		foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
