@@ -2141,7 +2141,7 @@ p.demo_store {
   text-align: left;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  width: 50%;
+  max-width: 400px;
 }
 .woocommerce ul#shipping_method,
 .woocommerce-page ul#shipping_method {
@@ -2708,4 +2708,7 @@ p.demo_store {
 }
 .hide {
   display: none;
+}
+.nowrap {
+  white-space: nowrap;
 }

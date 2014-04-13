@@ -32,12 +32,12 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			<?php endif; ?>
 
 			<p class="form-row form-row-wide">
-				<label for="reg_email"><?php _e( 'Email address', 'woocommerce' ); ?> <span class="required">*</span></label>
+				<label for="reg_email"><?php _e( 'Email address', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
 				<input type="email" class="input-text" name="email" id="reg_email" value="<?php if ( ! empty( $_POST['email'] ) ) echo esc_attr( $_POST['email'] ); ?>" />
 			</p>
 
 			<p class="form-row form-row-wide">
-				<label for="reg_password"><?php _e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
+				<label for="reg_password"><?php _e( 'Password', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
 				<input type="password" class="input-text" name="password" id="reg_password" value="<?php if ( ! empty( $_POST['password'] ) ) echo esc_attr( $_POST['password'] ); ?>" />
 			</p>
 
@@ -51,6 +51,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 				<?php wp_nonce_field( 'woocommerce-register', 'register' ); ?>
 				<input type="submit" class="button" name="register" value="<?php _e( 'Register', 'woocommerce' ); ?>" />
 			</p>
+			<p class="lost_password">
+				<a href="<?php echo get_permalink( wc_get_page_id( 'myaccount' ) ); ?>"><?php _e( 'Already have an account?', 'woocommerce' ); ?></a>
+			</p>
 
 			<?php do_action( 'woocommerce_register_form_end' ); ?>
 
@@ -63,11 +66,11 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		<?php do_action( 'woocommerce_login_form_start' ); ?>
 
 		<p class="form-row form-row-wide">
-			<label for="username"><?php _e( 'Username or email address', 'woocommerce' ); ?> <span class="required">*</span></label>
+			<label for="username"><?php _e( 'Username or email address', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
 			<input type="text" class="input-text" name="username" id="username" />
 		</p>
 		<p class="form-row form-row-wide">
-			<label for="password"><?php _e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
+			<label for="password"><?php _e( 'Password', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
 			<input class="input-text" type="password" name="password" id="password" />
 		</p>
 
@@ -76,15 +79,15 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		<p class="form-row">
 			<?php wp_nonce_field( 'woocommerce-login' ); ?>
 			<input type="submit" class="button" name="login" value="<?php _e( 'Login', 'woocommerce' ); ?>" /> 
-			<label for="rememberme" class="inline">
+			<label for="rememberme" class="inline nowrap">
 				<input name="rememberme" type="checkbox" id="rememberme" value="forever" /> <?php _e( 'Remember me', 'woocommerce' ); ?>
 			</label>
 		</p>
 		<p class="lost_password">
-			<a href="<?php echo get_permalink( wc_get_page_id( 'myaccount' ) ).'&register'; ?>"><?php _e( 'Don\'t have aacount?', 'woocommerce' ); ?></a>
+			<a href="<?php echo esc_url( wc_lostpassword_url() ); ?>"><?php _e( 'Lost your password?', 'woocommerce' ); ?></a>
 		</p>
 		<p class="lost_password">
-			<a href="<?php echo esc_url( wc_lostpassword_url() ); ?>"><?php _e( 'Lost your password?', 'woocommerce' ); ?></a>
+			<a href="<?php echo get_permalink( wc_get_page_id( 'myaccount' ) ).'&register'; ?>"><?php _e( 'Register', 'woocommerce' ); ?></a>
 		</p>
 
 		<?php do_action( 'woocommerce_login_form_end' ); ?>
