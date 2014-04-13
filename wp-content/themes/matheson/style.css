@@ -7060,7 +7060,7 @@ input, textarea {
 .navbar-toggle, .social-toggle {
   border-color: #dddddd;
   position: absolute;
-  top: 20px;
+  top: 40px;
   right: 0;
   padding: 5px 14px;
   color: #aaa;
@@ -8233,7 +8233,7 @@ a img.aligncenter {
 .wc-nav li span span.contents{
   margin-right: 0;
 }
-.wc-nav li.checkout{
+.wc-nav li.checkout, li.login, li.logout{
   margin-left: 20px;
 }
 @font-face {
@@ -8252,24 +8252,32 @@ a img.aligncenter {
   font-style: normal;
   speak: none;
 }
-.wc-nav li.checkout a:before {
-  font-family: 'WebSymbolsRegular';
+.wc-nav li.checkout a:before, li.cart a:before, li.login a:before, #register a:before {
   display: inline-block;
   vertical-align:top;
   /*padding-top:1px;*/
   font-size: .857em;
   margin-right: .418em;
-  content: ")";
+  margin-top: .18em;
   font-weight: normal;
 }
 .wc-nav li.cart a:before {
+  display: none !important;
   font-family: "icomoon";
-  display: inline-block;
-  font-size: .857em;
-  margin-right: .418em;
-  font-size: 1em;
   content: "£";
-  font-weight: normal;
+}
+.wc-nav li.checkout a:before {
+  font-family: 'WebSymbolsRegular';
+  content: ")";
+}
+.wc-nav li.login a:before {
+  font-family: 'WebSymbolsRegular';
+  content: "X";
+}
+.wc-nav #register a:before {
+  margin-left: 20px;
+  font-family: 'WebSymbolsRegular';
+  content: "K";
 }
 
 .header_image{
