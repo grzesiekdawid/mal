@@ -19,6 +19,19 @@ get_header();
 				while ( have_posts() ) : the_post();
 					?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+							<?php
+								add_filter( 'the_title', function( $title ) {
+									if($title=='My Account'){
+										if(is_user_logged_in()) return 'Edit pofile';
+										else{
+											if(isset($_GET['register'])) return _e( 'Register', 'woocommerce' );
+											elseif(isset($_GET['lost-password'])) return 'Lost password';
+											else return _e( 'Login', 'woocommerce' );
+										}
+									}
+									else return $title;
+								});
+							?>
 							<h1 class="entry-title"><?php the_title(); ?></h1>
 
 
