@@ -36,9 +36,10 @@ global $woocommerce;
 							echo '<li class="checkout"><a href="'.esc_url($woocommerce->cart->get_checkout_url()).'" title="Proceed to payment">'.__('Checkout','woothemes').'</a></li>';
 
 							if ( is_user_logged_in() ) {
-								echo '<li class="logout"><a href="' . '" title="Log in">Log out</a></li>';
+								echo '<li class="login"><a href="' . '" title="Log in">Log out</a></li>';
 							} else {
 								echo '<li class="login"><a href="' . '" title="Log in">Log in</a></li>';
+								echo '<li id="register"><a href="' . '" title="Log in">Register</a></li>';
 							}
 
 

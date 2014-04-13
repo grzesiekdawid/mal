@@ -7060,7 +7060,7 @@ input, textarea {
 .navbar-toggle, .social-toggle {
   border-color: #dddddd;
   position: absolute;
-  top: 20px;
+  top: 40px;
   right: 0;
   padding: 5px 14px;
   color: #aaa;
@@ -8252,7 +8252,7 @@ a img.aligncenter {
   font-style: normal;
   speak: none;
 }
-.wc-nav li.checkout a:before, li.cart a:before, li.login a:before, li.logout a:before {
+.wc-nav li.checkout a:before, li.cart a:before, li.login a:before, #register a:before {
   display: inline-block;
   vertical-align:top;
   /*padding-top:1px;*/
@@ -8260,7 +8260,6 @@ a img.aligncenter {
   margin-right: .418em;
   margin-top: .18em;
   font-weight: normal;
-  margin-left: 20px;
 }
 .wc-nav li.cart a:before {
   display: none !important;
@@ -8271,9 +8270,14 @@ a img.aligncenter {
   font-family: 'WebSymbolsRegular';
   content: ")";
 }
-.wc-nav li.login a:before, li.logout a:before {
+.wc-nav li.login a:before {
   font-family: 'WebSymbolsRegular';
   content: "X";
+}
+.wc-nav #register a:before {
+  margin-left: 20px;
+  font-family: 'WebSymbolsRegular';
+  content: "K";
 }
 
 .header_image{
