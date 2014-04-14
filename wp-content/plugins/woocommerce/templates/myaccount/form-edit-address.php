@@ -23,23 +23,23 @@ get_currentuserinfo();
 	<?php wc_get_template( 'myaccount/my-address.php' ); ?>
 
 <?php else : ?>
+	<div class="address-form">
+		<a href="<?php echo get_permalink( wc_get_page_id( 'myaccount' ) ); ?>"><i class="fa fa-arrow-circle-left"></i>&nbsp;Back to profile</a>
+		<form method="post" class="address-form">
 
-	<form method="post">
+			<?php foreach ( $address as $key => $field ) : ?>
 
-		<h3><?php echo apply_filters( 'woocommerce_my_account_edit_address_title', $page_title ); ?></h3>
+				<?php woocommerce_form_field( $key, $field, ! empty( $_POST[ $key ] ) ? wc_clean( $_POST[ $key ] ) : $field['value'] ); ?>
 
-		<?php foreach ( $address as $key => $field ) : ?>
+			<?php endforeach; ?>
 
-			<?php woocommerce_form_field( $key, $field, ! empty( $_POST[ $key ] ) ? wc_clean( $_POST[ $key ] ) : $field['value'] ); ?>
+			<p class="save-address">
+				<input type="submit" class="button" name="save_address" value="<?php _e( 'Save Address', 'woocommerce' ); ?>" />
+				<?php wp_nonce_field( 'woocommerce-edit_address' ); ?>
+				<input type="hidden" name="action" value="edit_address" />
+			</p>
 
-		<?php endforeach; ?>
-
-		<p>
-			<input type="submit" class="button" name="save_address" value="<?php _e( 'Save Address', 'woocommerce' ); ?>" />
-			<?php wp_nonce_field( 'woocommerce-edit_address' ); ?>
-			<input type="hidden" name="action" value="edit_address" />
-		</p>
-
-	</form>
-
+		</form>
+		<a href="<?php echo get_permalink( wc_get_page_id( 'myaccount' ) ); ?>"><i class="fa fa-arrow-circle-left"></i>&nbsp;Back to profile</a>
+	</div>
 <?php endif; ?>

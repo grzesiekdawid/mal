@@ -16,24 +16,19 @@ $customer_id = get_current_user_id();
 if ( get_option( 'woocommerce_ship_to_billing_address_only' ) === 'no' && get_option( 'woocommerce_calc_shipping' ) !== 'no' ) {
 	$page_title = apply_filters( 'woocommerce_my_account_my_address_title', __( 'My Addresses', 'woocommerce' ) );
 	$get_addresses    = apply_filters( 'woocommerce_my_account_get_addresses', array(
-		'billing' => __( 'Billing Address', 'woocommerce' ),
-		'shipping' => __( 'Shipping Address', 'woocommerce' )
+		'billing' => __( '<i class="fa fa-envelope-o"></i>&nbsp;Your billing Address:', 'woocommerce' ),
+		'shipping' => __( '<i class="fa fa-truck"></i>&nbsp;Your shipping Address:', 'woocommerce' )
 	), $customer_id );
 } else {
 	$page_title = apply_filters( 'woocommerce_my_account_my_address_title', __( 'My Address', 'woocommerce' ) );
 	$get_addresses    = apply_filters( 'woocommerce_my_account_get_addresses', array(
-		'billing' =>  __( 'Billing Address', 'woocommerce' )
+		'billing' =>  __( '<i class="fa fa-envelope-o"></i>&nbsp;Your billing Address:', 'woocommerce' )
 	), $customer_id );
 }
 
 $col = 1;
 ?>
-
-<h2><?php echo $page_title; ?></h2>
-
-<p class="myaccount_address">
-	<?php echo apply_filters( 'woocommerce_my_account_my_address_description', __( 'The following addresses will be used on the checkout page by default.', 'woocommerce' ) ); ?>
-</p>
+<br />
 
 <?php if ( get_option( 'woocommerce_ship_to_billing_address_only' ) === 'no' && get_option( 'woocommerce_calc_shipping' ) !== 'no' ) echo '<div class="col2-set addresses">'; ?>
 
@@ -41,10 +36,9 @@ $col = 1;
 
 	<div class="col-<?php echo ( ( $col = $col * -1 ) < 0 ) ? 1 : 2; ?> address">
 		<header class="title">
-			<h3><?php echo $title; ?></h3>
-			<a href="<?php echo wc_get_endpoint_url( 'edit-address', $name ); ?>" class="edit"><?php _e( 'Edit', 'woocommerce' ); ?></a>
+			<span class="edit-address-title"><?php echo $title; ?></span>
 		</header>
-		<address>
+		<address class="address">
 			<?php
 				$address = apply_filters( 'woocommerce_my_account_my_address_formatted_address', array(
 					'first_name' 	=> get_user_meta( $customer_id, $name . '_first_name', true ),
@@ -65,7 +59,10 @@ $col = 1;
 				else
 					echo $formatted_address;
 			?>
+			<br />
+			<a href="<?php echo wc_get_endpoint_url( 'edit-address', $name ); ?>" class="edit edit-address">(<?php _e( 'Edit', 'woocommerce' ); ?>)</a>
 		</address>
+
 	</div>
 
 <?php endforeach; ?>

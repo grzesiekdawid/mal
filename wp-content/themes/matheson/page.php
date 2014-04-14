@@ -22,7 +22,13 @@ get_header();
 							<?php
 								add_filter( 'the_title', function( $title ) {
 									if($title=='My Account'){
-										if(is_user_logged_in()) return 'Edit pofile';
+										if(is_user_logged_in()){
+											if(isset($_GET['edit-address'])){
+												if($_GET['edit-address']=='shipping') return 'Shipping address';
+												elseif($_GET['edit-address']=='billing') return 'Billing address';
+											}
+											else return 'Edit pofile';
+										}
 										else{
 											if(isset($_GET['register'])) return _e( 'Register', 'woocommerce' );
 											elseif(isset($_GET['lost-password'])) return 'Lost password';
