@@ -22,6 +22,14 @@ global $woocommerce;
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if IE]><script src="<?php echo BAVOTASAN_THEME_URL; ?>/library/js/html5.js"></script><![endif]-->
 <?php wp_head(); ?>
+
+<?php
+
+global $wp;
+$current_url = add_query_arg( $wp->query_string, '', home_url( $wp->request ) );
+
+?>
+
 </head>
 <body <?php body_class(); ?>>
 
@@ -36,10 +44,12 @@ global $woocommerce;
 							echo '<li class="checkout"><a href="'.esc_url($woocommerce->cart->get_checkout_url()).'" title="Proceed to payment">'.__('Checkout','woothemes').'</a></li>';
 
 							if ( is_user_logged_in() ) {
-								echo '<li class="login"><a href="' . '" title="Log in">Log out</a></li>';
+
+
+								echo '<li class="login"><a href="' . home_url() . '/wp-login.php?action=logout&redirect_to=' . wp_logout_url($current_url) . '" title="Log in">Log out</a></li>';
 							} else {
-								echo '<li class="login"><a href="' . '" title="Log in">Log in</a></li>';
-								echo '<li id="register"><a href="' . '" title="Log in">Register</a></li>';
+								echo '<li class="login"><a href="' . home_url() . '/?page_id=7" title="Log in">Log in</a></li>';
+								echo '<li id="register"><a href="' . home_url() . '/?page_id=7" title="Log in">Register</a></li>';
 							}
 
 
