@@ -201,6 +201,7 @@ p.demo_store {
 .woocommerce .woocommerce-info .button,
 .woocommerce-page .woocommerce-info .button {
   float: right;
+  font-family: times;
 }
 .woocommerce .woocommerce-message li,
 .woocommerce-page .woocommerce-message li,
@@ -662,6 +663,7 @@ p.demo_store {
 .woocommerce-page #content div.product form.cart .button {
   vertical-align: middle;
   float: left;
+  font-family: times;
 }
 .woocommerce div.product form.cart .group_table td.label,
 .woocommerce-page div.product form.cart .group_table td.label,
@@ -888,7 +890,7 @@ p.demo_store {
   line-height: 1em;
   cursor: pointer;
   position: relative;
-  font-family: inherit;
+  font-family: times;
   overflow: visible;
   padding: 6px 10px;
   text-decoration: none;
