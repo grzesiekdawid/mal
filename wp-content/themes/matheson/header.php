@@ -20,6 +20,7 @@ global $woocommerce;
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<script src="<?php echo BAVOTASAN_THEME_URL;  ?>/library/js/fb.js"></script>
 <!--[if IE]><script src="<?php echo BAVOTASAN_THEME_URL; ?>/library/js/html5.js"></script><![endif]-->
 <?php wp_head(); ?>
 
@@ -37,8 +38,10 @@ $current_url = add_query_arg( $wp->query_string, '', home_url( $wp->request ) );
 
 		<header id="header">
 			<div class="container header-meta">
+			<div class="fb-like" data-href="https://www.facebook.com/monkeyandleo" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" style="display:inline"></div>
+
 				<?php
-					if ( class_exists( 'woocommerce' ) ) {
+					if ( class_exists( 'woocommerce' ) ) {					
 						echo '<ul class="wc-nav">';
 							woocommerce_cart_link();
 							echo '<li class="checkout"><a href="'.esc_url($woocommerce->cart->get_checkout_url()).'" title="Proceed to payment">'.__('Checkout','woothemes').'</a></li>';
@@ -81,7 +84,6 @@ $current_url = add_query_arg( $wp->query_string, '', home_url( $wp->request ) );
 				</nav><!-- #site-navigation -->
 			</div>
 		</header>
-
 		<?php
 		// Header image section
 		//header_images();

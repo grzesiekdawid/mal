@@ -2743,3 +2743,6 @@ p.save-address {
   text-align: center;
   margin-top: 10px;
 }
+.fb-like {
+  float: left;
+}
