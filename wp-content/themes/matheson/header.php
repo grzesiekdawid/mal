@@ -20,6 +20,11 @@ global $woocommerce;
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+
+<script src="<?php echo BAVOTASAN_THEME_URL; ?>/library/js/jquery.js"></script>
+<script src="<?php echo BAVOTASAN_THEME_URL; ?>/library/js/qtip.js"></script>
+<script src="<?php echo BAVOTASAN_THEME_URL; ?>/library/js/custom.js"></script>
+
 <!--[if IE]><script src="<?php echo BAVOTASAN_THEME_URL; ?>/library/js/html5.js"></script><![endif]-->
 <?php wp_head(); ?>
 
@@ -41,17 +46,15 @@ $current_url = add_query_arg( $wp->query_string, '', home_url( $wp->request ) );
 					if ( class_exists( 'woocommerce' ) ) {
 						echo '<ul class="wc-nav">';
 							woocommerce_cart_link();
-							echo '<li class="checkout"><a href="'.esc_url($woocommerce->cart->get_checkout_url()).'" title="Proceed to payment">'.__('Checkout','woothemes').'</a></li>';
+							echo '<li id="checkout" class="login"><a href="'.esc_url($woocommerce->cart->get_checkout_url()).'" title="Proceed to payment">'.__('Checkout','woothemes').'</a></li>';
 
 							if ( is_user_logged_in() ) {
-
-
-								echo '<li class="login"><a href="' . home_url() . '/wp-login.php?action=logout&redirect_to=' . wp_logout_url($current_url) . '" title="Log in">Log out</a></li>';
+								echo '<li id="edit-profile" class="login"><a href="' . home_url() . '/?page_id=7" title="Edit">Edit profile</a></li>';
+								echo '<li id="log-out" class="login"><a href="' . home_url() . '/wp-login.php?action=logout&redirect_to=' . wp_logout_url($current_url) . '" title="Log out">Log out</a></li>';
 							} else {
-								echo '<li class="login"><a href="' . home_url() . '/?page_id=7" title="Log in">Log in</a></li>';
-								echo '<li id="register"><a href="' . home_url() . '/?page_id=7" title="Log in">Register</a></li>';
+								echo '<li id="log-in" class="login"><a href="' . home_url() . '/?page_id=7" title="Log in">Log in</a></li>';
+								echo '<li id="register" class="login"><a href="' . home_url() . '/?page_id=7" title="Register">Register</a></li>';
 							}
-
 
 						echo '</ul>';
 					}

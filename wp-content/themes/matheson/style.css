@@ -8252,7 +8252,7 @@ a img.aligncenter {
   font-style: normal;
   speak: none;
 }
-.wc-nav li.checkout a:before, li.cart a:before, li.login a:before, #register a:before {
+.wc-nav li.cart a:before, li.login a:before {
   display: inline-block;
   vertical-align:top;
   /*padding-top:1px;*/
@@ -8262,23 +8262,27 @@ a img.aligncenter {
   font-weight: normal;
 }
 .wc-nav li.cart a:before {
-  display: none !important;
+  /*display: none !important;*/
   font-family: "icomoon";
   content: "£";
 }
-.wc-nav li.checkout a:before {
+.wc-nav li#checkout a:before {
   font-family: 'WebSymbolsRegular';
   content: ")";
 }
-.wc-nav li.login a:before {
+.wc-nav li#edit-profile a:before {
   font-family: 'WebSymbolsRegular';
-  content: "X";
+  content: "U";
 }
 .wc-nav #register a:before {
-  margin-left: 20px;
   font-family: 'WebSymbolsRegular';
   content: "K";
 }
+.wc-nav #log-in a:before, #log-out a:before {
+  font-family: 'WebSymbolsRegular';
+  content: "X";
+}
+
 
 .header_image{
   width:400px;

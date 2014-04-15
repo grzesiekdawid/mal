@@ -115,7 +115,8 @@ p.demo_store {
 		}
 
 		.button {
-			float: right;
+			left:40%;
+			/*float: right;*/
 		}
 
 		li {
@@ -1379,6 +1380,7 @@ p.demo_store {
 				margin: 0;
 			}
 			.required {
+				font-size: 0.7em;
 				color: red;
 				font-weight:bold;
 				border: 0;
@@ -1892,15 +1894,16 @@ address.address{
 	margin: 0;
 }
 
-div.address-form{
+div.address-form, div.profile-form {
 	max-width:600px;
-		margin: 0 auto;
+	margin: 0 auto;
 }
 
-form.address-form{
+form.profile-form, form.address-form {
 
-	// border: 1px dashed #ddd;
-	background-color: #eee;
+	border: 1px solid #ddd;
+	/*background-color: #eee;*/
+	color: #777;
 
 	padding: 15px;
 	input.button{
@@ -1912,3 +1915,20 @@ p.save-address{
 	text-align:center;
 	margin-top: 10px;
 }
+
+.my-button {
+	background-color: white;
+	margin-top: 20px;
+	background-color: rgb(235,235,235);
+
+	&:hover {
+		background-color: rgb(210,210,210);
+		margin-top: 20px;
+	}
+}
+
+
+
+
+
+
