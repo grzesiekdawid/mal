@@ -24,6 +24,7 @@ global $woocommerce;
 <script src="<?php echo BAVOTASAN_THEME_URL; ?>/library/js/jquery.js"></script>
 <script src="<?php echo BAVOTASAN_THEME_URL; ?>/library/js/qtip.js"></script>
 <script src="<?php echo BAVOTASAN_THEME_URL; ?>/library/js/custom.js"></script>
+<script src="<?php echo BAVOTASAN_THEME_URL;  ?>/library/js/fb.js"></script>
 
 <!--[if IE]><script src="<?php echo BAVOTASAN_THEME_URL; ?>/library/js/html5.js"></script><![endif]-->
 <?php wp_head(); ?>
@@ -42,6 +43,8 @@ $current_url = add_query_arg( $wp->query_string, '', home_url( $wp->request ) );
 
 		<header id="header">
 			<div class="container header-meta">
+			<div class="fb-like" data-href="https://www.facebook.com/monkeyandleo" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" style="display:inline"></div>
+
 				<?php
 					if ( class_exists( 'woocommerce' ) ) {
 						echo '<ul class="wc-nav">';
@@ -84,7 +87,6 @@ $current_url = add_query_arg( $wp->query_string, '', home_url( $wp->request ) );
 				</nav><!-- #site-navigation -->
 			</div>
 		</header>
-
 		<?php
 		// Header image section
 		//header_images();
